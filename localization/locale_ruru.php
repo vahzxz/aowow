@@ -82,7 +82,7 @@ $lang = array(
         // red buttons
         'links'         => "Ссылки",
         'compare'       => "Сравнить",
-        'view3D'        => "Посмотреть в 3D",
+        //'view3D'        => "Посмотреть в 3D",
         'findUpgrades'  => "Найти лучше…",
         'report'        => "Жалоба",
         'writeGuide'    => "Написать новое руководство",

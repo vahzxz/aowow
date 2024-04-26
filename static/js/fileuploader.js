@@ -291,11 +291,11 @@ qq.FileUploaderBasic = function(o){
         onError: function(id, fileName, xhr) {},
         // messages
         messages: {
-            typeError: "Unfortunately the file(s) you selected weren't the type we were expecting. Only {extensions} files are allowed.",
-            sizeError: "{file} is too large, maximum file size is {sizeLimit}.",
-            minSizeError: "{file} is too small, minimum file size is {minSizeLimit}.",
-            emptyError: "{file} is empty, please select files again without it.",
-            onLeave: "The files are being uploaded, if you leave now the upload will be cancelled."
+            typeError: "К сожалению, выбранные вами файлы не того типа, который мы ожидали. Только {extensions} файлы разрешены.",
+            sizeError: "{file} слишком велик, максимальный размер файла {sizeLimit}.",
+            minSizeError: "{file} слишком мал, минимальный размер файла {minSizeLimit}.",
+            emptyError: "{file} пуст, пожалуйста, выберите файлы еще раз без него.",
+            onLeave: "Файлы загружаются, если вы покинете страницу, загрузка будет отменена."
         },
         showMessage: function(message){
             alert(message);
@@ -529,10 +529,10 @@ qq.FileUploader = function(o){
         element: null,
         // if set, will be used instead of qq-upload-list in template
         listElement: null,
-        dragText: 'Drop files here to upload',
-        uploadButtonText: 'Upload a file',
-        cancelButtonText: 'Cancel',
-        failUploadText: 'Upload failed',
+        dragText: 'Перетащите сюда файлы для загрузки',
+        uploadButtonText: 'Загрузить файл',
+        cancelButtonText: 'Отмена',
+        failUploadText: 'Загрузка не удалась',
         hideShowDropArea: true,
 
         template: '<div class="qq-uploader">' +
@@ -613,7 +613,7 @@ qq.extend(qq.FileUploader.prototype, {
     _find: function(parent, type){
         var element = qq.getByClass(parent, this._options.classes[type])[0];
         if (!element){
-            throw new Error('element not found ' + type);
+            throw new Error('элемент не найден ' + type);
         }
 
         return element;
@@ -1141,7 +1141,7 @@ qq.extend(qq.UploadHandlerForm.prototype, {
         var input = this._inputs[id];
 
         if (!input){
-            throw new Error('file with passed id was not added, or already uploaded or cancelled');
+            throw new Error('файл с переданным идентификатором не был добавлен, либо уже загружен, либо удален');
         }
 
         var fileName = this.getName(id);
@@ -1152,7 +1152,7 @@ qq.extend(qq.UploadHandlerForm.prototype, {
 
         var self = this;
         this._attachLoadEvent(iframe, function(){
-            self.log('iframe loaded');
+            self.log('iframe загружен');
 
             var response = self._getIframeContentJSON(iframe);
 

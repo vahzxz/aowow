@@ -2616,7 +2616,7 @@ a.modelviewer-close {
 
 .layout {
     min-width: 980px;
-    max-width: 1340px;
+    max-width: 98%;
     margin: 0 auto;
 }
 
@@ -2626,7 +2626,7 @@ a.modelviewer-close {
 }
 
 .layout-inner {
-    padding: 0 10px;
+    padding: 0 0px;
 }
 
 /**********/

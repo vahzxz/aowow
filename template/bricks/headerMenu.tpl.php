@@ -7,4 +7,4 @@ else:
     echo '<a href="?account=signin">'.Lang::main('signIn').'</a>';
 endif;
 ?>
-|<a href="#" id="toplinks-feedback" class="icon-email"><?=Lang::main('feedback'); ?></a>|<a href="javascript:;" id="toplinks-language"><?=Lang::main('language'); ?></a>
+|<a href="https://wow-vision.ru/forum/">Форум</a>|<a href="https://wow-vision.ru/">Сайт</a>

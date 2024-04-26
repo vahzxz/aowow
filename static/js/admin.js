@@ -8,12 +8,12 @@ function ar_ValidateUrl(a) {
     }
 
     if (a.length < 2) {
-        return "URL must be at least 2 characters long.";
+        return "Длина URL-адреса должна составлять не менее 2 символов.";
     }
     else if (a.length > 64) {
-        return "URL must be at most 64 characters long.";
+        return "Длина URL-адреса должна составлять не более 64 символов.";
     }
     else {
-        return "You used invalid characters in your URL.\n\nYou can only use the following:\n a to z\n 0 to 9\n = _ & . / -"
+        return "Вы использовали недопустимые символы в своем URL-адресе.\n\nВы можете использовать только следующие:\n a to z\n 0 to 9\n = _ & . / -"
     }
 };

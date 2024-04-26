@@ -1404,7 +1404,7 @@ Summary.prototype = {
                 td.colSpan = this.visibility.length;
             }
             td.style.textAlign = 'center';
-            $WH.ae(span, $WH.ct('The items in this set don\'t have any comparable stats.'));
+            $WH.ae(span, $WH.ct('Предметы в этом наборе не имеют сопоставимых характеристик.'));
             $WH.ae(td, span);
             $WH.ae(tr, td);
             $WH.ae(this.tbody, tr);

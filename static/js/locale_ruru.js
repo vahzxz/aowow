@@ -811,9 +811,9 @@ var mn_currencies = [
     [2,"PvP","?currencies=2"]
 ];
 var mn_enchantments = [
-    [1,"[Proc Spell]","?enchantments&filter=ty=1"],
-    [3,"[Equip Spell]","?enchantments&filter=ty=3"],
-    [7,"[Use Spell]","?enchantments&filter=ty=7"],
+    [1,"[Заклинания срабатывания]","?enchantments&filter=ty=1"],
+    [3,"[Заклинания экипировки]","?enchantments&filter=ty=3"],
+    [7,"[Заклинания использования]","?enchantments&filter=ty=7"],
     [8,"Бесцветное гнездо","?enchantments&filter=ty=8"],
     [5,"Характеристики","?enchantments&filter=ty=5"],
     [2,"Урон оружия","?enchantments&filter=ty=2"],
@@ -823,34 +823,34 @@ var mn_enchantments = [
 var mn_sounds = [
     [1000, "Мой плейлист", "?sound&playlist"],
     [, "Типы"],
-    [19,"Armor","?sounds&filter=ty=19"],
-    [16,"Death","?sounds&filter=ty=16"],
-    [25,"Doodads","?sounds&filter=ty=25"],
-    [52,"Emitters","?sounds&filter=ty=52"],
-    [29,"Emotes","?sounds&filter=ty=29"],
-    [12,"Errors","?sounds&filter=ty=12"],
-    [20,"Footstep Splash","?sounds&filter=ty=20"],
-    [3,"Footsteps","?sounds&filter=ty=3"],
-    [24,"Misc Ambience","?sounds&filter=ty=24"],
-    [10,"NPC Combat","?sounds&filter=ty=10"],
-    [17,"NPC Greetings","?sounds&filter=ty=17"],
+    [19,"Броня","?sounds&filter=ty=19"],
+    [16,"Смерть","?sounds&filter=ty=16"],
+    [25,"Безделушки","?sounds&filter=ty=25"],
+    [52,"Излучатели","?sounds&filter=ty=52"],
+    [29,"Эмоции","?sounds&filter=ty=29"],
+    [12,"Ошибки","?sounds&filter=ty=12"],
+    [20,"Всплеск шагов","?sounds&filter=ty=20"],
+    [3,"Шаги","?sounds&filter=ty=3"],
+    [24,"Разная атмосфера","?sounds&filter=ty=24"],
+    [10,"NPC Бой","?sounds&filter=ty=10"],
+    [17,"NPC Приветствия","?sounds&filter=ty=17"],
     [27,"NPC Loops","?sounds&filter=ty=27"],
-    [31,"Narration","?sounds&filter=ty=31"],
-    [30,"Narration Music","?sounds&filter=ty=30"],
-    [13,"Nature","?sounds&filter=ty=13"],
-    [14,"Objects","?sounds&filter=ty=14"],
-    [9,"Pick Up/Put Down","?sounds&filter=ty=9"],
-    [26,"Spell Fizzle","?sounds&filter=ty=26"],
-    [1,"Spells","?sounds&filter=ty=1"],
-    [23,"Tradeskills","?sounds&filter=ty=23"],
-    [2,"User Interface","?sounds&filter=ty=2"],
-    [53,"Vehicles","?sounds&filter=ty=53"],
-    [22,"Water","?sounds&filter=ty=22"],
-    [21,"Water (Character)","?sounds&filter=ty=21"],
-    [4,"Weapons Impacts","?sounds&filter=ty=4"],
-    [6,"Weapons Misses","?sounds&filter=ty=6"],
-    [50,"Zone Ambience","?sounds&filter=ty=50"],
-    [28,"Zone Music","?sounds&filter=ty=28"]
+    [31,"Рассказы","?sounds&filter=ty=31"],
+    [30,"Музыка для рассказов","?sounds&filter=ty=30"],
+    [13,"Природа","?sounds&filter=ty=13"],
+    [14,"Объекты","?sounds&filter=ty=14"],
+    [9,"Звуки поднятия/ложения","?sounds&filter=ty=9"],
+    [26,"Заклинание шипение","?sounds&filter=ty=26"],
+    [1,"Заклинания","?sounds&filter=ty=1"],
+    [23,"Профессиональные навыки","?sounds&filter=ty=23"],
+    [2,"Пользовательский интерфейс","?sounds&filter=ty=2"],
+    [53,"Транспортные средства","?sounds&filter=ty=53"],
+    [22,"Вода","?sounds&filter=ty=22"],
+    [21,"Вода (Персонаж)","?sounds&filter=ty=21"],
+    [4,"Воздействие оружия","?sounds&filter=ty=4"],
+    [6,"Промахи оружием","?sounds&filter=ty=6"],
+    [50,"Атмосфера зоны","?sounds&filter=ty=50"],
+    [28,"Музыка зоны","?sounds&filter=ty=28"]
 ];
 var mn_icons = [
     [3, "Достижения", "?icons&filter=cr=3;crs=1;crv=0"],
@@ -868,12 +868,12 @@ var mn_icons = [
 ];
 // aowow - custom start
 var mn_areatrigger = [
-    [0, 'Unused', '?areatriggers&filter=ty=0'],
-    [1, 'Tavern', '?areatriggers&filter=ty=1'],
-    [2, 'Teleporter', '?areatriggers&filter=ty=2'],
-    [3, 'Quest Objective', '?areatriggers&filter=ty=3'],
-    [4, 'Smart Trigger', '?areatriggers&filter=ty=4'],
-    [5, 'Script', '?areatriggers&filter=ty=5']
+    [0, 'Неиспользуемый', '?areatriggers&filter=ty=0'],
+    [1, 'Таверна', '?areatriggers&filter=ty=1'],
+    [2, 'Телепорт', '?areatriggers&filter=ty=2'],
+    [3, 'Цель задания', '?areatriggers&filter=ty=3'],
+    [4, 'Smart Триггер', '?areatriggers&filter=ty=4'],
+    [5, 'Скрипт', '?areatriggers&filter=ty=5']
 ];
 // aowow - custom end
 var mn_talentCalc = [
@@ -950,8 +950,8 @@ var mn_database = [
     [, "Другое"],
     [31, "Иконки", "?icons", mn_icons],
     [19,"Звуки","?sounds",mn_sounds],
-    [102, 'Areatrigger', '?areatriggers', mn_areatrigger, {requiredAccess: 1726}],    // aowow - custom
-    [103, 'Mails', '?mails']                                // aowow - custom
+    [102, 'Area триггер', '?areatriggers', mn_areatrigger, {requiredAccess: 1726}],    // aowow - custom
+    [103, 'Письма', '?mails']                                // aowow - custom
 ];
 
 var mn_guides = [
@@ -982,17 +982,17 @@ var mn_tools = [
         [,"База данных"],
         // [0,"Последние добавления","?latest-additions"],
         // [1,"Новые статьи","?latest-articles"],
-        [2,"Последние комментарии","?latest-comments"],
+        //[2,"Последние комментарии","?latest-comments"],
         [3,"Последние изображения","?latest-screenshots"],
         [11,"Последние видео","?latest-videos"],
-        [12,"Популярные комментируемые",,[
-            [1,"Вчера","?most-comments"],
-            [7,"Последние 7 дней","?most-comments=7"],
-            [30,"Последние 30 дней","?most-comments=30"]
-        ]],
-        [5,"Комментарии без оценки","?unrated-comments"],
-        [13,"Без изображений","?missing-screenshots"],
-        [4,"Случайная страница","?random"]
+        //[12,"Популярные комментируемые",,[
+        //    [1,"Вчера","?most-comments"],
+        //    [7,"Последние 7 дней","?most-comments=7"],
+        //    [30,"Последние 30 дней","?most-comments=30"]
+        //]],
+        //[5,"Комментарии без оценки","?unrated-comments"],
+        //[13,"Без изображений","?missing-screenshots"],
+        //[4,"Случайная страница","?random"]
     ]]
 ];
 var mn_reputation = [
@@ -1013,15 +1013,15 @@ var mn_reputation = [
     [17, "AoWoW Premium", "?privilege=17"]
 ];
 var mn_community = [
-    [3,"Форум","http://forums.battle.net",null,{tinyIcon: g_staticUrl + "/images/icons/forum.png"}],
-    [7,"Блог","http://worldpress.com",null,{tinyIcon: g_staticUrl + "/images/icons/blog.png"}],
-    [4,"Канал IRC","http://webchat.quakenet.org/",null,{tinyIcon: g_staticUrl + "/images/icons/irc.png"}],
-    [,"Сообщество"],
+    //[3,"Форум","http://forums.battle.net",null,{tinyIcon: g_staticUrl + "/images/icons/forum.png"}],
+    //[7,"Блог","http://worldpress.com",null,{tinyIcon: g_staticUrl + "/images/icons/blog.png"}],
+    //[4,"Канал IRC","http://webchat.quakenet.org/",null,{tinyIcon: g_staticUrl + "/images/icons/irc.png"}],
+    //[,"Сообщество"],
     [10, "Репутация на сайте", "?reputation", mn_reputation],
     [11, "Лучшие пользователи", "?top-users"],
-    [,"Социальные сети"],
-    [6,"Facebook","http://facebook.com",null,{tinyIcon: g_staticUrl + "/images/icons/facebook.png"}],
-    [5,"Twitter","http://twitter.com",null,{tinyIcon: g_staticUrl + "/images/icons/twitter.png"}]
+    //[,"Социальные сети"],
+    //[6,"Facebook","http://facebook.com",null,{tinyIcon: g_staticUrl + "/images/icons/facebook.png"}],
+    //[5,"Twitter","http://twitter.com",null,{tinyIcon: g_staticUrl + "/images/icons/twitter.png"}]
 ];
 var mn_more = [
     [,"О AoWoW"],
@@ -1035,7 +1035,7 @@ var mn_more = [
         [2,"Скриншоты: Секреты мастерства","?help=screenshots-tips-tricks"],
         [3,"Значимость характеристик","?help=stat-weighting"],
         [4,"Расчёт талантов","?help=talent-calculator"],
-        [7,"Markup Guide","?help=markup-guide"]
+        [7,"Руководство по гайдам","?help=markup-guide"]
     ]],
     [7,"Новости","?whats-new"],
     [,"Для вашего сайта"],
@@ -1047,9 +1047,9 @@ var mn_more = [
 var mn_path = [
     [0, "База данных",   null,      mn_database],
     [1, "Инструменты",   null,      mn_tools],
-    [3, "Сообщество",    null,      mn_community],
-    [6, "Гайды",         '?guides', mn_guides],
-    [2, "Дополнительно", null,      mn_more]
+    //[3, "Сообщество",    null,      mn_community],
+    //[6, "Гайды",         '?guides', mn_guides],
+    //[2, "Дополнительно", null,      mn_more]
 ];
 
 var g_contact_reasons = {
@@ -1742,7 +1742,7 @@ var g_sources = {
     15: 'Распылено',
     16: 'Вылавливается',
     17: 'Собрано',
-    18: '[Milled]',
+    18: 'Распыляется',
     19: 'Выкапывается',
     20: 'Просеивается',
     21: 'Можно украсть',
@@ -2376,70 +2376,70 @@ var g_socket_names = {
 
 /* aowow custom */
 var g_trigger_types = {
-    0: 'Unused',
-    1: 'Tavern',
-    2: 'Teleporter',
-    3: 'Quest Objective',
-    4: 'Smart Trigger',
-    5: 'Script'
+    0: 'Неиспользованный',
+    1: 'Таверна',
+    2: 'Телепорт',
+    3: 'Цель задания',
+    4: 'Smart Триггер',
+    5: 'Скрипт'
 };
 
 // DRUNK_MESSAGE_*
 var g_drunk_states = {
-    0: 'sober',
-    1: 'tipsy',
-    2: 'drunk',
-    3: 'smashed'
+    0: 'трезвый',
+    1: 'подвыпивший',
+    2: 'пьяный',
+    3: 'ФУЛЛ пьян'
 };
 
 var g_operators = {
-    0: 'exact',
-    1: 'more than',
-    2: 'less than',
-    3: 'more than or exact',
-    4: 'less than or exact'
+    0: 'точный',
+    1: 'больше, чем',
+    2: 'меньше, чем',
+    3: 'более чем или точно',
+    4: 'меньше чем или точно'
 };
 
 var g_world_object_types = {
-    3: 'Creature',
-    4: 'Player',
+    3: 'Существо',
+    4: 'Игрок',
     5: 'Объект',
-    7: 'Player Corpse'
+    7: 'Труп игрока'
 };
 
 var g_condition_types = {
-     1: ['Looting',        'If the conditions are met, this item can be dropped by [npc=$1].'],                                 // CND_SRC_CREATURE_LOOT_TEMPLATE
-     2: ['Disenchanting',  'If the conditions are met, this item can be found when disenchanting [item=$1].'],                  // CND_SRC_DISENCHANT_LOOT_TEMPLATE
-     3: ['Fishing',        'If the conditions are met, fishing in [zone=$1] can yield this item.'],                             // CND_SRC_FISHING_LOOT_TEMPLATE
-     4: ['Object Opening', 'If the conditions are met, this item can be found in [object=$1].'],                                // CND_SRC_GAMEOBJECT_LOOT_TEMPLATE
-     5: ['Item Opening',   'If the conditions are met, this item can be found in [item=$1].'],                                  // CND_SRC_ITEM_LOOT_TEMPLATE
-     6: ['Mail Attachm.',  'If the conditions are met, this item can be attached to this mail.'],                               // CND_SRC_MAIL_LOOT_TEMPLATE
-     7: ['Milling',        'If the conditions are met, this item can be milled from [item=$1].'],                               // CND_SRC_MILLING_LOOT_TEMPLATE
-     8: ['Pickpocketing',  'If the conditions are met, this item can be picked from [npc=$1].'],                                // CND_SRC_PICKPOCKETING_LOOT_TEMPLATE
-     9: ['Prospecting',    'If the conditions are met, this item can be prospected from [item=$1].'],                           // CND_SRC_PROSPECTING_LOOT_TEMPLATE
+     1: ['Лутаемый',        'Если условия будут выполнены, этот элемент может быть удален [npc=$1].'],                                 // CND_SRC_CREATURE_LOOT_TEMPLATE
+     2: ['Распыляемый',  'При выполнении условий этот предмет можно рыспылить [item=$1].'],                  // CND_SRC_DISENCHANT_LOOT_TEMPLATE
+     3: ['Рыбная ловля',        'Если условия соблюдены, рыбалка в [zone=$1] может привести к получению этого товара.'],                             // CND_SRC_FISHING_LOOT_TEMPLATE
+     4: ['Открытие объекта', 'Если условия соблюдены, этот товар можно найти в [object=$1].'],                                // CND_SRC_GAMEOBJECT_LOOT_TEMPLATE
+     5: ['Открытие предмета',   'Если условия соблюдены, этот товар можно найти в [item=$1].'],                                  // CND_SRC_ITEM_LOOT_TEMPLATE
+     6: ['Почтовое вложение.',  'Если условия выполнены, этот предмет можно прикрепить к этому письму.'],                               // CND_SRC_MAIL_LOOT_TEMPLATE
+     7: ['Распыление',        'При соблюдении условий этот элемент может быть распылен из [item=$1].'],                               // CND_SRC_MILLING_LOOT_TEMPLATE
+     8: ['Кража',  'Если условия соблюдены, этот товар можно выбрать из [npc=$1].'],                                // CND_SRC_PICKPOCKETING_LOOT_TEMPLATE
+     9: ['Поиск',    'Если условия соблюдены, этот товар можно найти в [item=$1].'],                           // CND_SRC_PROSPECTING_LOOT_TEMPLATE
     10: ['Ref. Looting',   ''],                                                                                                 // CND_SRC_REFERENCE_LOOT_TEMPLATE
-    11: ['Skinning',       'If the conditions are met, this item can be skinned from [npc=$1].'],                               // CND_SRC_SKINNING_LOOT_TEMPLATE
-    12: ['Crafting',       'If the conditions are met, casting [spell=$1] may also create this item.'],                         // CND_SRC_SPELL_LOOT_TEMPLATE
-    13: ['Auto Target',    'Only targets matching the conditions can be affected by the spell.'],                               // CND_SRC_SPELL_IMPLICIT_TARGET
-    14: ['Gossip',         'Display the related Gossip entry on [npc=$2], if the conditions are met.'],                         // CND_SRC_GOSSIP_MENU
-    15: ['Gossip Menu',    'Display the related Gossip menu, if the conditions are met.'],                                      // CND_SRC_GOSSIP_MENU_OPTION
-    16: ['Vehicle',        'This Creature can be used as a vehicle, if the conditions are met.'],                               // CND_SRC_CREATURE_TEMPLATE_VEHICLE
-    17: ['Spell',          'This Spell can only be cast, if the conditions are met.'],                                          // CND_SRC_SPELL
-    18: ['Spell Click',    'If the conditions are met, [npc=$2] casts [spell=$1] if clicked on.'],                              // CND_SRC_SPELL_CLICK_EVENT
-    19: ['Quest Accept',   'The Player can accept this quest, if the condition is met.'],                                       // CND_SRC_QUEST_SHOW_MARK
-    20: ['Quest Sign',     'A [icon name=quest_startend]&nbsp;[/icon] will be shown for this quest, if the condition is met.'], // CND_SRC_QUEST_ACCEPT
-    21: ['Vehicle Spell',  'If the conditions are met, vehicle [npc=$2] has [spell=$1] available.'],                            // CND_SRC_VEHICLE_SPELL
-    22: ['SmartAI',        'If the conditions are met, the creatures AI may perform additional actions.'],                      // CND_SRC_SMART_EVENT
-    23: ['Vendor',         'If the conditions are met, the vendor will have this item available.'],                             // CND_SRC_NPC_VENDOR
-    24: ['Spell Proc',     'If the conditions are met, the spell is allowed to proc.']                                          // CND_SRC_SPELL_PROC
+    11: ['Снятие шкур',       'Если условия выполнены, с этого предмета можно снять шкуру. [npc=$1].'],                               // CND_SRC_SKINNING_LOOT_TEMPLATE
+    12: ['Крафт',       'Если условия соблюдены, каст [spell=$1] также может создать этот элемент.'],                         // CND_SRC_SPELL_LOOT_TEMPLATE
+    13: ['Авто цель',    'Заклинание может воздействовать только на цели, соответствующие условиям.'],                               // CND_SRC_SPELL_IMPLICIT_TARGET
+    14: ['Gossip',         'Отобразить соответствующую запись Gossip на [npc=$2], если условия соблюдены.'],                         // CND_SRC_GOSSIP_MENU
+    15: ['Gossip Menu',    'Отобразите соответствующее меню «Gossip», если условия соблюдены.'],                                      // CND_SRC_GOSSIP_MENU_OPTION
+    16: ['Маунт',        'Это Существо можно использовать в качестве транспортного средства, если соблюдены условия.'],                               // CND_SRC_CREATURE_TEMPLATE_VEHICLE
+    17: ['Заклинание',          'Это заклинание можно использовать только при соблюдении условий.'],                                          // CND_SRC_SPELL
+    18: ['Spell Click',    'Если условия соблюдены, [npc=$2] кастонёт [spell=$1] если нажать.'],                              // CND_SRC_SPELL_CLICK_EVENT
+    19: ['Задание принято',   'Игрок может принять это задание, если будет выполнено условие.'],                                       // CND_SRC_QUEST_SHOW_MARK
+    20: ['Квестовый знак',     'Этот [icon name=quest_startend]&nbsp;[/icon] будет показан для выполнения этого задания, если условие будет выполнено.'], // CND_SRC_QUEST_ACCEPT
+    21: ['Заклинание маунта',  'Если условия соблюдены, транспортное средство [npc=$2] имеет [spell=$1]'],                            // CND_SRC_VEHICLE_SPELL
+    22: ['SmartAI',        'Если условия выполнены, SmartAI существ может выполнять дополнительные действия.'],                      // CND_SRC_SMART_EVENT
+    23: ['Продавец',         'Если условия будут выполнены, этот товар будет доступен продавцу.'],                             // CND_SRC_NPC_VENDOR
+    24: ['Spell Proc',     'Если условия выполнены, заклинанию разрешено сработать.']                                          // CND_SRC_SPELL_PROC
 };
 
 var g_conditions = {
-     1: 'The Player $has:does not have; an aura of $1',
-     2: 'The Player $owns: does not own; $1',
-     3: 'The Player $has:does not have; $1 equipped',
-     4: 'The Player is$: not; in $1',                       // also used by 22, 23
-     5: 'The Player\'s standing with $1 is$: not; $2',
+     1: 'Игрок $имеет:не имеет; ауру $1',
+     2: 'Игрок $владеет: не владеет; $1',
+     3: 'Игрок $имеет:не имеет; $1 экипировку',
+     4: 'Игрок$: не; в $1',                       // also used by 22, 23
+     5: 'Игрок\'s стоит с $1 является$: нет; $2',
      6: 'The Player is$: not; $1',
      7: 'The Player $knows: does not know; $1',
      8: 'The Player has$: not; finished $1',
@@ -2750,13 +2750,13 @@ var LANG = {
     lvnodata4:    "Вы ничего не исключили из списка.",
     lvnodata_co1: "На этой странице нет комментариев.",
     lvnodata_co2: "<a>Будьте первым</a>, кто оставит комментарий на этой странице!",
-    lvnodata_co3: "<a>Войдите</a>, чтобы оставить комментарий, или <a>зарегистрируйтесь</a>, если у вас еще нет учетной записи.",
+    lvnodata_co3: "<a>Войдите</a>, чтобы оставить комментарий.",
     lvnodata_ss1: "К этой странице не добавлено изображений.",
     lvnodata_ss2: "<a>Будьте первым</a>, кто добавит изображение к этой странице!",
-    lvnodata_ss3: "<a>Войдите</a>, чтобы разместить изображение, или <a>зарегистрируйтесь</a>, если у вас еще нет учетной записи.",
+    lvnodata_ss3: "<a>Войдите</a>, чтобы разместить изображение.",
     lvnodata_vi1: "К этой странице не добавлено видео.",
     lvnodata_vi2: "<a>Будьте первым</a>, кто предложит видео к этой странице!",
-    lvnodata_vi3: "<a>Войдите</a>, чтобы предложить видео, или <a>зарегистрируйтесь</a>, если у вас еще нет учетной записи.",
+    lvnodata_vi3: "<a>Войдите</a>, чтобы предложить видео.",
 
     lvnote_sort: "Сортировать: ",
 
@@ -2869,7 +2869,7 @@ var LANG = {
     button_resync:       "Ресинхронизация",
     button_selectall:    "Выбрать всё",
     button_upgrades:     "Найти лучше",
-    button_viewin3d:     "Посмотреть в 3D",
+    //button_viewin3d:     "Посмотреть в 3D",
     button_markup:       "Разметка",
     button_link:         "Ссылка",
 
@@ -3403,7 +3403,7 @@ var LANG = {
         501: ["Эмоция",         "эмоция",          "Эмоции",          "эмоции"],
         502: ["Улучшение",      "улучшение",       "Улучшения",       "улучшения"],
         503: ["Areatrigger",    "areatrigger",     "Areatriggers",    "areatriggers"],
-        504: ["Mail",           "mail",            "Mails",           "mails"]
+        504: ["Письма",           "mail",            "Mails",           "mails"]
     },
 
     timeunitssg: ["год", "месяц", "неделя", "день", "час", "минута", "секунда"],
@@ -4695,7 +4695,7 @@ var LANG = {
     su_resetweight:  "Сброс",
 
     su_export:       "Экспорт",
-    su_viewin3d:     "Посмотреть в 3D",
+    //su_viewin3d:     "Посмотреть в 3D",
     su_split:        "Разделить",
 
     su_customscale:  "Пользовательский фильтр #$1",

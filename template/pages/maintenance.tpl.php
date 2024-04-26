@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
-    <title>Maintenance</title>
+    <title>Поддержка</title>
 
     <style type="text/css">
         body { text-align: center; font-family: Arial; background-color: black; color: white }
@@ -14,8 +14,8 @@
 </head>
 <body>
     <div class="maintenance">
-    <div>The website is currently closed for maintenance.</div>
-    <p>This will take a few minutes...</p>
+    <div>В настоящее время веб-сайт закрыт на техническое обслуживание.</div>
+    <p>Это займет несколько минут...</p>
     </div>
 </body>
 </html>

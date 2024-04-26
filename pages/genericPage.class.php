@@ -242,7 +242,7 @@ class GenericPage
         'enchantment'       => ['template' => 'enchantment',       'id' => 'enchantments',    'parent' => 'lv-generic', 'data' => []                                      ],
         'event'             => ['template' => 'holiday',           'id' => 'holidays',        'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_holidays'      ],
         'faction'           => ['template' => 'faction',           'id' => 'factions',        'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_factions'      ],
-        'genericmodel'      => ['template' => 'genericmodel',      'id' => 'same-model-as',   'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_samemodelas'   ],
+        //'genericmodel'      => ['template' => 'genericmodel',      'id' => 'same-model-as',   'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_samemodelas'   ],
         'icongallery'       => ['template' => 'icongallery',       'id' => 'icons',           'parent' => 'lv-generic', 'data' => []                                      ],
         'item'              => ['template' => 'item',              'id' => 'items',           'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_items'         ],
         'itemset'           => ['template' => 'itemset',           'id' => 'itemsets',        'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_itemsets'      ],
@@ -263,7 +263,7 @@ class GenericPage
         'topusers'          => ['template' => 'topusers',          'id' => 'topusers',        'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.topusers'          ],
         'video'             => ['template' => 'video',             'id' => 'videos',          'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_videos'        ],
         'zone'              => ['template' => 'zone',              'id' => 'zones',           'parent' => 'lv-generic', 'data' => [], 'name' => '$LANG.tab_zones'         ],
-        'guide'             => ['template' => 'guide',             'id' => 'guides',          'parent' => 'lv-generic', 'data' => [],                                     ]
+        //'guide'             => ['template' => 'guide',             'id' => 'guides',          'parent' => 'lv-generic', 'data' => [],                                     ]
     );
 
     public function __construct(string $pageCall = '', string $pageParam = '')

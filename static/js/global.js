@@ -22023,13 +22023,13 @@ var Links = new function() {
                     {
                         id:    'wowheadurl',
                         type:  'text',
-                        label: 'Aowow URL',
+                        label: 'URL',
                         size:  40
                     },
                     {
                         id:    'markuptag',
                         type:  'text',
-                        label: 'Markup Tag',
+                        label: 'Тег разметки',
                         size:  40
                     }
                 ],

@@ -1,22 +1,22 @@
 var mn_content = [
 //  [22, 'Achievements',             '?admin=achievements',                   null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV | U_GROUP_BUREAU}],
-    [3,  'Announcements',            '?admin=announcements',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU}],
-    [25, 'Guides Awaiting Approval', '?admin=guides',                         null,           {requiredAccess: U_GROUP_STAFF}],
+    [3,  'Объявления',            '?admin=announcements',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU}],
+    [25, 'Руководства, ожидающие одобрения', '?admin=guides',                         null,           {requiredAccess: U_GROUP_STAFF}],
 //  [20, 'Global Images & Headers',  '?admin=headers',                        null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU}],
 //  [21, 'Modelviewer',              '?admin=modelviewer',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU}],
-    [23, 'Out of Date Comments',     '?admin=out-of-date',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_MOD}],
-    [5,  'Screenshots',              '?admin=screenshots',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_SCREENSHOT}],
+    [23, 'Устаревшие комментарии',     '?admin=out-of-date',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_MOD}],
+    [5,  'Скриншоты',              '?admin=screenshots',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_SCREENSHOT}],
 //  [18, 'Upload Image',             '?npc=15384#submit-a-screenshot',        null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_EDITOR, rel: 'np'}],
-    [17, 'Videos',                   '?admin=videos',                         null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_VIDEO}],
+    [17, 'Видео',                   '?admin=videos',                         null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_VIDEO}],
 
-    [,   'Homepage'],
-    [13, 'Featured Box',             '?admin=home-featuredbox',               null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Homepage Featured Box'}],
-    [14, 'Oneliners',                '?admin=home-oneliners',                 null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Homepage Oneliners'}],
+    [,   'Домашняя страница'],
+    [13, 'Отличительная коробка',             '?admin=home-featuredbox',               null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Поле "Избранное" на главной странице'}],
+    [14, 'Единомышленники',                '?admin=home-oneliners',                 null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Домашняя страница Единомышленники'}],
 //  [15, 'Skins',                    '?admin=home-skins',                     null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_SALESAGENT, breadcrumb: 'Homepage Skins'}],
-    [16, 'Titles',                   '?admin=home-titles',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Homepage Titles'}],
+    [16, 'Названия',                   '?admin=home-titles',                    null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Заголовки домашней страницы'}],
 
-    [,   'Articles'],
-    [8,  'List',                     '?admin=articles',                       null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_DEV | U_GROUP_EDITOR | U_GROUP_LOCALIZER, breadcrumb: 'List of Articles'}],
+    [,   'Статьи'],
+    [8,  'Список',                     '?admin=articles',                       null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_DEV | U_GROUP_EDITOR | U_GROUP_LOCALIZER, breadcrumb: 'Список статей'}],
 //  [9,  'Editors\' Lounge',         '?admin=editors-lounge',                 null,           {requiredAccess: U_GROUP_EMPLOYEE | U_GROUP_EDITOR | U_GROUP_LOCALIZER}],
 //  [23, 'Related Links',            '?admin=related-links',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU}],
 
@@ -25,7 +25,7 @@ var mn_content = [
 //  [11, 'Content Corner',           '?admin=content-corner',                 null,           {requiredAccess: U_GROUP_EMPLOYEE | U_GROUP_BLOGGER}],
 //  [12, 'Tags',                     '?admin=newstag',                        null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_DEV | U_GROUP_BLOGGER, breadcrumb: 'News Tags'}],
 //  [24, 'Patch Updates',            '?admin=patch-updates',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU}],
-    [26, 'Featured Guides',          '?admin=featuredguides',                 null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Featured Guides'}],
+    [26, 'Рекомендуемые руководства',          '?admin=featuredguides',                 null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU, breadcrumb: 'Рекомендуемые руководства'}],
 
 //  [,   'Community'],
 //  [4,  'Contests',                 '?admin=contests',                       null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_SALESAGENT}],
@@ -39,8 +39,8 @@ var mn_content = [
 
 var mn_dev = [
 //  [17, 'Cookies',                  '?admin=cookies',                        null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
-    [21, 'PHP Information',          '?admin=phpinfo',                        null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
-    [18, 'Site Configuration',       '?admin=siteconfig',                     null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
+    [21, 'PHP Информация',          '?admin=phpinfo',                        null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
+    [18, 'Конфигурация сайта',       '?admin=siteconfig',                     null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
     [16, 'Weight Presets',           '?admin=weight-presets',                 null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_DEV}],
 //  [22, 'API Keys',                 '?admin=apikey',                         null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_BUREAU | U_GROUP_DEV}],
 
@@ -67,16 +67,16 @@ var mn_dev = [
 ];
 
 var mn_localization = [
-    [1, 'Generate Files',            '?admin=locale-export',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV, breadcrumb: 'Generate Localization Files'}],
+    [1, 'Генерировать файлы',            '?admin=locale-export',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV, breadcrumb: 'Создание файлов локализации'}],
 
-    [,  'Terms'],
-    [4, 'Check Integrity',           '?admin=locale-integrity',               null,           {requiredAccess: U_GROUP_EMPLOYEE | U_GROUP_LOCALIZER, breadcrumb: 'Check Term Integrity'}],
-    [2, 'Manage',                    '?admin=locale-search',                  null,           {requiredAccess: U_GROUP_EMPLOYEE | U_GROUP_LOCALIZER, breadcrumb: 'Manage Terms'}],
+    [,  'Условия'],
+    [4, 'Проверьте целостность',           '?admin=locale-integrity',               null,           {requiredAccess: U_GROUP_EMPLOYEE | U_GROUP_LOCALIZER, breadcrumb: 'Проверьте целостность термина'}],
+    [2, 'Управлять',                    '?admin=locale-search',                  null,           {requiredAccess: U_GROUP_EMPLOYEE | U_GROUP_LOCALIZER, breadcrumb: 'Управление условиями'}],
 
-    [,  'Deprecated'],
-    [6, 'Create Template',           '?admin=locale-template',                null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV, breadcrumb: 'Create Localization Template'}],
-    [5, 'Import Old Localized File', '?admin=locale-import',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
-    [7, 'Upload Global Strings',     '?admin=locale-upload',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}]
+    [,  'Обсуждения'],
+    [6, 'Создать Template',           '?admin=locale-template',                null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV, breadcrumb: 'Создать шаблон локализации'}],
+    [5, 'Импорт Старого локализованного файла', '?admin=locale-import',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}],
+    [7, 'Загружать глобальную локализацию',     '?admin=locale-upload',                  null,           {requiredAccess: U_GROUP_ADMIN | U_GROUP_DEV}]
 ];
 
 var mn_statistics = [

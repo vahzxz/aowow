@@ -84,17 +84,17 @@ function detach(c) {
             previewWindow = window.open("", "", "toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=1");
             previewWindow.document.open();
             var b = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml">\n';
-            b += "<head>\n<title>Live Preview - " + document.title + '</title>\n\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n\n';
+            b += "<head>\n<title>Предварительный просмотр - " + document.title + '</title>\n\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n\n';
             b += '<link rel="stylesheet" type="text/css" href="<?php echo UrlHelper::GetStaticUrl(\'/css/global.css?255\'); ?>" />\n<link rel="stylesheet" type="text/css" href="<?php echo UrlHelper::GetStaticUrl(\'/css/locale_enus.css?255\'); ?>" /><!--[if IE]>\n<link rel="stylesheet" type="text/css" href="<?php echo UrlHelper::GetStaticUrl(\'/css/global_ie.css?255\'); ?>" /><![endif]--><!--[if lte IE 6]>\n<link rel="stylesheet" type="text/css" href="<?php echo UrlHelper::GetStaticUrl(\'/css/global_ie6.css?255\'); ?>" /><![endif]-->\n\n<script src="<?php echo UrlHelper::GetStaticUrl(\'/js/locale_enus.js?255\'); ?>" type="text/javascript"><\/script>\n<script src="<?php echo UrlHelper::GetStaticUrl(\'/js/global.js?255\'); ?>" type="text/javascript"><\/script>\n\n';
             b += "<script>//<![CDATA[\n\nfunction updatePreview(text)\n{\n\tvar si = $WH.g_getScroll();\n\tge('livePreview').innerHTML = text;\n\tscrollTo(si.x, si.y);\n}\n\nfunction updateQfPreview(text)\n{\n\tvar si = $WH.g_getScroll();\n\tvar qf = $WH.ge('liveQfPreview');\n\tqf.innerHTML = text;\n\tqf.parentNode.parentNode.parentNode.parentNode.style.display = (text? '': 'none');\n\tscrollTo(si.x, si.y);\n}\n\n//]]><\/script>\n\n";
-            b += '</head>\n\n<body>\n\n<div id="main-contents" class="main-contents text">\n\n<table class="infobox">\n<tbody><tr><th>Quick Facts</th></tr>\n<tr><td><ul id="liveQfPreview"><li style="display: none"></li></ul></td></tr>\n</tbody></table>\n\n<div id="livePreview"></div>\n\n</div>\n\n</body>\n</html>';
+            b += '</head>\n\n<body>\n\n<div id="main-contents" class="main-contents text">\n\n<table class="infobox">\n<tbody><tr><th>Краткие факты</th></tr>\n<tr><td><ul id="liveQfPreview"><li style="display: none"></li></ul></td></tr>\n</tbody></table>\n\n<div id="livePreview"></div>\n\n</div>\n\n</body>\n</html>';
             previewWindow.document.write(b);
             previewWindow.document.close();
-            $WH.ge("livePreview").innerHTML = "See popup window.";
+            $WH.ge("livePreview").innerHTML = "Открыть всплывающее окно";
             $WH.ge("liveQfPreview").parentNode.parentNode.parentNode.parentNode.style.display = "none";
             updatePreview(1);
             updateQfPreview(1);
-            c.innerHTML = "Close popup";
+            c.innerHTML = "Закрыть всплывающее окно";
         }
         catch(a) {
             previewWindow = 0;
@@ -103,7 +103,7 @@ function detach(c) {
 }
 
 function insertMapLink() {
-    var mapStr = prompt("Please enter the ID of the zone.\n\nYou may also import a full map by pasting a ?maps=... link.", "");
+    var mapStr = prompt("Пожалуйста, введите ID зоны.\n\nВы также можете импортировать полную карту, вставив ?maps=... линк.", "");
     if (mapStr != null) {
         var f = mapStr.match(/maps=(\d+[a-z]?)(:(\d+))?/);
         if (f != null && f[1] != null) {
@@ -142,7 +142,7 @@ function validateForm(form, _) {
 
 function leavePage(a) {
     if (window.onbeforeunload == null)
-        window.onbeforeunload = function (b) { return "Are you sure you want to leave this page?"; }
+        window.onbeforeunload = function (b) { return "Вы уверены, что хотите покинуть эту страницу?"; }
 
     if (a)
         window.onbeforeunload = null;
@@ -151,19 +151,19 @@ function leavePage(a) {
 $(document).ready(function () {
     $("#guide-form").submit(function () {
         if (!$("#title").val()) {
-            alert("Please enter a title.");
+            alert("Пожалуйста, введите название.");
             $("#title").focus();
             return false;
         }
 
         if (!$("#category").val()) {
-            alert("You must choose a category.");
+            alert("Вы должны выбрать категорию.");
             $("#category").focus();
             return false;
         }
 
         if (!$("#editBox").val()) {
-            alert("Your guide contains no text!");
+            alert("Ваш гайд не содержит текста!");
             $("#editBox").focus();
             return false;
         }

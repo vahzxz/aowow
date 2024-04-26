@@ -21,7 +21,7 @@ if (!empty($this->featuredBox['altHomeLogo'])):
     </style>
 <?php endif; ?>
     <div class="home-wrapper">
-        <h1>Aowow</h1>
+        <h1>Head-VISION</h1>
         <div class="home-logo" id="home-logo"></div>
 
 <?php $this->brick('announcement'); ?>
@@ -81,11 +81,8 @@ endif;
     <div class="toplinks linklist"><?php $this->brick('headerMenu'); ?></div>
 
     <div class="footer">
-        <div class="footer-links linklist">
-            <a href="?aboutus"><?=Lang::main('aboutUs'); ?></a>|<a href="https://github.com/Sarjuuk/aowow" target="_blank">Github</a>|<a href="#" id="footer-links-language"><?=Lang::main('language'); ?></a>
-        </div>
         <div class="footer-copy">
-            &#12484; 2024 Aowow<br />rev. <?=AOWOW_REVISION; ?>
+            &#12484; 2024 Head-VISION<br />WoW 3.3.5
         </div>
     </div>
 

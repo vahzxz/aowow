@@ -10,7 +10,7 @@ var TB_GROUP_COMMON = TB_BLOG | TB_ARTICLE | TB_QUICKFACTS | TB_CONTEST;
 
 function __AddToolbar(mode, ta, tbParent, mnParent) {
     var a = function (typeStr, tag) {
-        var id = prompt('Please enter the ID of the ' + typeStr + '.', '');
+        var id = prompt('Пожалуйста, введите ID пользователя ' + typeStr + '.', '');
         if (id != null) {
             g_insertTag(ta, '[' + tag + '=' + (parseInt(id) || 0) + ']', '');
         }
@@ -40,15 +40,15 @@ function __AddToolbar(mode, ta, tbParent, mnParent) {
 
     var e = LANG.ellipsis;
     var menu = [
-        [0, 'Color', , [
+        [0, 'Цвет', , [
             [0, LANG.types[3][2], , [
-                [0, 'Poor',      g_insertTag.bind(null, ta, '[color=q0]', '[/color]'), null, {className: 'q0'}],
-                [1, 'Common',    g_insertTag.bind(null, ta, '[color=q1]', '[/color]'), null, {className: 'q1'}],
-                [2, 'Uncommon',  g_insertTag.bind(null, ta, '[color=q2]', '[/color]'), null, {className: 'q2'}],
-                [3, 'Rare',      g_insertTag.bind(null, ta, '[color=q3]', '[/color]'), null, {className: 'q3'}],
-                [4, 'Epic',      g_insertTag.bind(null, ta, '[color=q4]', '[/color]'), null, {className: 'q4'}],
-                [5, 'Legendary', g_insertTag.bind(null, ta, '[color=q5]', '[/color]'), null, {className: 'q5'}],
-                [7, 'Heirloom',  g_insertTag.bind(null, ta, '[color=q7]', '[/color]'), null, {className: 'q7'}]
+                [0, 'Низкий',      g_insertTag.bind(null, ta, '[color=q0]', '[/color]'), null, {className: 'q0'}],
+                [1, 'Обычный',    g_insertTag.bind(null, ta, '[color=q1]', '[/color]'), null, {className: 'q1'}],
+                [2, 'Необычный',  g_insertTag.bind(null, ta, '[color=q2]', '[/color]'), null, {className: 'q2'}],
+                [3, 'Редкий',      g_insertTag.bind(null, ta, '[color=q3]', '[/color]'), null, {className: 'q3'}],
+                [4, 'Эпический',      g_insertTag.bind(null, ta, '[color=q4]', '[/color]'), null, {className: 'q4'}],
+                [5, 'Легендарный', g_insertTag.bind(null, ta, '[color=q5]', '[/color]'), null, {className: 'q5'}],
+                [7, 'Фамильная ценность',  g_insertTag.bind(null, ta, '[color=q7]', '[/color]'), null, {className: 'q7'}]
             //  [8, 'WoW Token', g_insertTag.bind(null, ta, '[color=q8]', '[/color]'), null, {className: 'q8'}]
             ]],
             [1, LANG.types[13][2], , [
@@ -78,10 +78,10 @@ function __AddToolbar(mode, ta, tbParent, mnParent) {
             ]],
             // npcs
             [3, LANG.types[1][2], , [
-                [1, 'Yell',    g_insertTag.bind(null, ta, '[color=yell]',    '[/color]'), null, {className: 's1'}],
-                [2, 'Say',     g_insertTag.bind(null, ta, '[color=say]',     '[/color]'), null, {className: 's2'}],
-                [3, 'Whisper', g_insertTag.bind(null, ta, '[color=whisper]', '[/color]'), null, {className: 's3'}],
-                [4, 'Emote',   g_insertTag.bind(null, ta, '[color=emote]',   '[/color]'), null, {className: 's4'}]
+                [1, 'Кричать',    g_insertTag.bind(null, ta, '[color=yell]',    '[/color]'), null, {className: 's1'}],
+                [2, 'Сказать',     g_insertTag.bind(null, ta, '[color=say]',     '[/color]'), null, {className: 's2'}],
+                [3, 'Шепот', g_insertTag.bind(null, ta, '[color=whisper]', '[/color]'), null, {className: 's3'}],
+                [4, 'Эмоция',   g_insertTag.bind(null, ta, '[color=emote]',   '[/color]'), null, {className: 's4'}]
             ]],
             [4, LANG.reputation, , [
                 [0, g_reputation_standings[0], g_insertTag.bind(null, ta, '[color=hated]',      '[/color]'), null, {className: 'rep-hated'}],
@@ -98,12 +98,12 @@ function __AddToolbar(mode, ta, tbParent, mnParent) {
                 [1,  g_gem_colors[6],  g_insertTag.bind(null, ta, '[color=r1]',  '[/color]'), null, {className: 'r1'}],
                 [2,  g_gem_colors[4],  g_insertTag.bind(null, ta, '[color=r2]',  '[/color]'), null, {className: 'r2'}],
                 [3,  g_gem_colors[12], g_insertTag.bind(null, ta, '[color=r3]',  '[/color]'), null, {className: 'r3'}],
-                [4,  'Gray',           g_insertTag.bind(null, ta, '[color=r4]',  '[/color]'), null, {className: 'r4'}],
+                [4,  'Серый',           g_insertTag.bind(null, ta, '[color=r4]',  '[/color]'), null, {className: 'r4'}],
             ]]
         ]],
         [1, LANG.icon, , [
             [0, LANG.su_note_other + LANG.ellipsis, function () {
-                var e = prompt('Please enter the name of the icon.', '');
+                var e = prompt('Пожалуйста, введите название иконки.', '');
                 if (e != null) {
                     g_insertTag('editBox', '[icon name=' + e + ']', '[/icon]')
                 }
@@ -222,9 +222,9 @@ function __AddToolbar(mode, ta, tbParent, mnParent) {
     if (mnParent && ((TB_BLOG | TB_ARTICLE | TB_INLINE) & mode)) {
         if (mode == TB_ARTICLE) {
             menu[2][3] = menu[2][3].concat([
-                [,   'Maps'],
-                [10, 'Map...', insertMapLink],
-                [11, 'Pin', g_insertTag.bind(null, ta, '[pin x=0 y=0 url=?]', '[/pin]')]
+                [,   'Карты'],
+                [10, 'Карта...', insertMapLink],
+                [11, 'Пин', g_insertTag.bind(null, ta, '[pin x=0 y=0 url=?]', '[/pin]')]
             ]);
         }
 

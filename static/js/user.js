@@ -108,13 +108,13 @@ Listview.funcBox.beforeUserComments = function()
         {
             var i = $WH.ce('input');
             i.type = 'button';
-            i.value = 'Delete';
+            i.value = 'Удалить';
             i.onclick = (function()
             {
                 var rows = this.getCheckedRows();
                 if (!rows.length)
-                    alert('No comments selected.');
-                else if (confirm('Are you sure that you want to delete ' + (rows.length == 1 ? 'this comment' : 'these ' + rows.length + ' comments') + '?'))
+                    alert('Комментарии не выбраны.');
+                else if (confirm('Вы уверены, что хотите удалить ' + (rows.length == 1 ? 'этот комментарий' : 'эти ' + rows.length + ' комментарии') + '?'))
                 {
                     var ids = "";
                     $WH.array_walk(rows, function(x)
@@ -137,12 +137,12 @@ Listview.funcBox.beforeUserComments = function()
 
             var i = $WH.ce('input');
             i.type = 'button';
-            i.value = 'Undelete';
+            i.value = 'Восстановить';
             i.onclick = (function()
             {
                 var rows = this.getCheckedRows();
                 if (!rows.length)
-                    alert('No comments selected.');
+                    alert('Комментарии не выбраны.');
                 else
                 {
                     var ids = '';

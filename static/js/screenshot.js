@@ -7,10 +7,10 @@ var ssm_numPagesFound   = 0;
 var ssm_numPages        = 0;                                // never accessed
 var ssm_numPending      = 0;
 var ssm_statuses        = {
-    0  : 'Pending',
-    999: 'Deleted',
-    100: 'Approved',
-    105: 'Sticky'
+    0  : 'Ожидаемый',
+    999: 'Удаленный',
+    100: 'Одобренный',
+    105: 'Закрепленные'
 };
 
 function makePipe() {
@@ -103,14 +103,14 @@ function ss_ManageUser() {
     username.value = $WH.trim(username.value);
 
     if (username.value.length < 4) {
-        alert('Username must be at least 4 characters long.');
+        alert('Имя пользователя должно быть длиной не менее 4 символов.');
         username.focus();
 
         return false;
     }
 
     if (username.value.match(/[^a-z0-9]/i) != null) {
-        alert('Username can only contain letters and numbers.');
+        alert('Имя пользователя может содержать только буквы и цифры.');
         username.focus();
 
         return false;
@@ -177,7 +177,7 @@ function ssm_ConfirmMassApprove() {
 }
 
 function ssm_ConfirmMassDelete() {
-    if (confirm('Delete selected screenshot(s)?'))          // aowow custom - see above
+    if (confirm('Удалить выбранные скриншоты?'))          // aowow custom - see above
         ajaxAnchor(this);
 
     return false;
@@ -185,7 +185,7 @@ function ssm_ConfirmMassDelete() {
 }
 
 function ssm_ConfirmMassSticky() {
-    if (confirm('Sticky selected screenshot(s)?'))          // aowow custom - see above
+    if (confirm('Закрепить выбранные скриншоты?'))          // aowow custom - see above
         ajaxAnchor(this);
 
     return false;
@@ -403,11 +403,11 @@ function ssm_UpdateList(openNext) {
                     $WH.sp(e);
                     (ssm_Approve.bind(this, false))()
                 }.bind(screenshot);
-                $WH.ae(a, $WH.ct('Approve'));
+                $WH.ae(a, $WH.ct('Утвердить'));
                 $WH.ae(td, a);
             }
             else {
-                $WH.ae(td, $WH.ct('Approve'));
+                $WH.ae(td, $WH.ct('Утвердить'));
             }
 
             $WH.ae(td, makePipe());
@@ -419,11 +419,11 @@ function ssm_UpdateList(openNext) {
                     $WH.sp(e);
                     (ssm_Sticky.bind(this, false))();
                 }.bind(screenshot);
-                $WH.ae(a, $WH.ct('Make sticky'));
+                $WH.ae(a, $WH.ct('Сделать закрепленным'));
                 $WH.ae(td, a);
             }
             else {
-                $WH.ae(td, $WH.ct('Make sticky'));
+                $WH.ae(td, $WH.ct('Сделать закрепленным'));
             }
             $WH.ae(td, makePipe());
 
@@ -433,7 +433,7 @@ function ssm_UpdateList(openNext) {
                 $WH.sp(e);
                 (ssm_Delete.bind(this, false))();
             }.bind(screenshot);
-            $WH.ae(a, $WH.ct('Delete'));
+            $WH.ae(a, $WH.ct('Удалить'));
             $WH.ae(td, a);
             $WH.ae(td, makePipe());
 
@@ -441,10 +441,10 @@ function ssm_UpdateList(openNext) {
             a.href = 'javascript:;';
             a.onclick = function (e) {
                 $WH.sp(e);
-                var id = prompt('Enter the ID to move this screenshot to:');
+                var id = prompt('Введите ID, чтобы переместить этот скриншот в:');
                 (ssm_Relocate.bind(this, id))();
             }.bind(screenshot);
-            $WH.ae(a, $WH.ct('Relocate'));
+            $WH.ae(a, $WH.ct('Переместить'));
             $WH.ae(td, a);
         }
 
@@ -563,7 +563,7 @@ function ssm_ShowEdit(screenshot, isAlt) {
 
     btn = $WH.ce('input');
     btn.type = 'button';
-    btn.value = 'Cancel';
+    btn.value = 'Отменить';
     btn.onclick = function (i, j, k) {
         if (!j) {
             $WH.sp(k);

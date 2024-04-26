@@ -1246,7 +1246,7 @@ $WH.g_convertScalingFactor = function(level, factor, dist, stat, json) {
 
     if (!scalingValues[level]) {
         if (g_user.roles & U_GROUP_ADMIN) {
-            alert('There are no item scaling values for level ' + level);
+            alert('Нет значений масштабирования предметов для уровня ' + level);
         }
 
         return (json ? {} : 0);
